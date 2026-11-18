@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark" data-density="comfortable">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="xiaoyuTools — 免费在线工具站：PDF 转换、合并、压缩、提取，图片压缩 / 抠图 / GIF / 水印 / EXIF 与文本处理等 118 件工具全部在浏览器本地运行。免注册、无水印、文件不上传，兼容操作可链式完成。">
+  <meta property="og:title" content="xiaoyuTools · 免费在线工具站">
+  <meta property="og:description" content="把文件的事，一次做完。118 件工具全部在浏览器本地运行，文件不上传，免注册、无水印。">
+  <meta property="og:type" content="website">
+  <title>xiaoyuTools · 免费在线工具站</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Segoe UI,sans-serif' font-weight='600' font-size='26' fill='%23f1f1f2' text-anchor='middle'%3Exy%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./src/styles.css">
+  <!-- AI 抠图库的裸模块导入映射到本地 vendor，运行时不访问任何 CDN -->
+  <script type="importmap">
+  {
+    "imports": {
+      "onnxruntime-web": "./vendor/onnxruntime/ort-esm.js",
+      "ndarray": "./vendor/esm/ndarray.js",
+      "zod": "./vendor/esm/zod.js",
+      "lodash": "./vendor/esm/lodash.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- 键盘第一个可聚焦元素：跳到主内容，跳过侧栏导航 -->
+  <a class="skip-link" href="#main">跳到主内容</a>
+  <div id="app"></div>
+  <noscript>这个工具箱需要启用 JavaScript 才能运行。</noscript>
+  <!-- 本地化的宽松许可库：运行时只读本机文件，不加载任何 CDN -->
+  <script src="./vendor/qrcode-generator/qrcode.js" defer></script>
+  <script src="./vendor/qrcode-generator/qrcode_UTF8.js" defer></script>
+  <script src="./vendor/pdf-lib/pdf-lib.min.js" defer></script>
+  <script src="./vendor/jszip/jszip.min.js" defer></script>
+  <script src="./vendor/pdfjs/pdf.min.js" defer></script>
+  <script src="./vendor/heic2any/heic2any.min.js" defer></script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

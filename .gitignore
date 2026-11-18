@@ -1,0 +1,10 @@
+# 依赖
+node_modules/
+
+# 测试产物（素材本身保留在 fixtures/）
+fixtures/out/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.log

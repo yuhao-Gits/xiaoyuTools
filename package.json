@@ -1,0 +1,25 @@
+{
+  "name": "xiaoyu-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "xiaoyuTools - 免费在线工具站：118 件工具全部在浏览器本地运行，文件不上传，免注册、无水印，兼容操作可链式完成",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js",
+    "test": "npm run test:clicks && npm run test:tools && npm run test:interactions && npm run test:gestures && npm run test:files && npm run test:downloads",
+    "test:clicks": "node scripts/test-clicks.mjs",
+    "test:tools": "node scripts/test-tools.mjs",
+    "test:interactions": "node scripts/test-interactions.mjs",
+    "test:gestures": "node scripts/test-gestures.mjs",
+    "test:files": "node scripts/test-files.mjs",
+    "test:downloads": "node scripts/test-downloads.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.49.1"
+  }
+}
